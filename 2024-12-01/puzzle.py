@@ -2,12 +2,12 @@ import re
 
 def list_generator():
   input_file  = open('input.txt', 'r')
+  lines = input_file.readlines()
+  input_file.close()
 
   count = 0
   left_list = []
   right_list = []
-  lines = input_file.readlines()
-  input_file.close()
   for line in lines:
     count += 1
     try:
