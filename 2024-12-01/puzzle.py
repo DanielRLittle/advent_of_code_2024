@@ -6,7 +6,9 @@ def list_generator():
   count = 0
   left_list = []
   right_list = []
-  for line in input_file.readlines():
+  lines = input_file.readlines()
+  input_file.close()
+  for line in lines:
     count += 1
     try:
       result = re.search("^([0-9]+)\s+([0-9]+)$", line)
